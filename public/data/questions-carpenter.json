@@ -1,0 +1,194 @@
+{
+  "role": "plumber",
+  "languages": {
+    "kannada": {
+      "warmup": [
+        {
+          "id": "plumb_kn_w1",
+          "text": "ನಮಸ್ಕಾರ ನೀವು ಎಲ್ಲಿಂದ ಬಂದಿದ್ದೀರಿ ಮತ್ತು ಎಷ್ಟು ವರ್ಷಗಳಿಂದ ಪ್ಲಂಬಿಂಗ್ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೀರಿ",
+          "type": "warmup",
+          "tip": "ನಿಮ್ಮ ಊರು ಮತ್ತು ಅನುಭವ ಹೇಳಿ",
+          "keywords": ["ವರ್ಷ", "ಕೆಲಸ", "ಅನುಭವ"]
+        },
+        {
+          "id": "plumb_kn_w2",
+          "text": "ನೀವು ಯಾವ ರೀತಿಯ ಪ್ಲಂಬಿಂಗ್ ಕೆಲಸ ಹೆಚ್ಚು ಮಾಡಿದ್ದೀರಿ",
+          "type": "warmup",
+          "tip": "ಮನೆ ಅಥವಾ ಕಟ್ಟಡ ಕೆಲಸ ಹೇಳಿ",
+          "keywords": ["ಪೈಪ್", "ಮನೆ", "ಕಟ್ಟಡ"]
+        }
+      ],
+      "technical_easy": [
+        {
+          "id": "plumb_kn_t_easy1",
+          "text": "ಪೈಪ್ ಸೋರಿಕೆ ಆದರೆ ನೀವು ಏನು ಮಾಡುತ್ತೀರಿ",
+          "type": "technical",
+          "difficulty": "easy",
+          "tip": "ಸಮಸ್ಯೆ ಪರಿಹಾರ ಹೇಳಿ",
+          "keywords": ["ಸೋರಿಕೆ", "ದುರಸ್ತಿ", "ಪೈಪ್"]
+        },
+        {
+          "id": "plumb_kn_t_easy2",
+          "text": "ನೀವು ಯಾವ ಉಪಕರಣಗಳನ್ನು ಬಳಸುತ್ತೀರಿ",
+          "type": "technical",
+          "difficulty": "easy",
+          "tip": "ಉಪಕರಣಗಳ ಹೆಸರು ಹೇಳಿ",
+          "keywords": ["ವ್ರೆಂಚ್", "ಪ್ಲಂಬರ್", "ಉಪಕರಣ"]
+        }
+      ],
+      "technical_medium": [
+        {
+          "id": "plumb_kn_t_med1",
+          "text": "ನೀರು ಒತ್ತಡ ಕಡಿಮೆ ಆದರೆ ಏನು ಮಾಡುತ್ತೀರಿ",
+          "type": "technical",
+          "difficulty": "medium",
+          "tip": "ಸಮಸ್ಯೆ ಕಂಡುಹಿಡಿಯುವ ಹಂತಗಳನ್ನು ಹೇಳಿ",
+          "keywords": ["ಒತ್ತಡ", "ಪರೀಕ್ಷೆ", "ಪೈಪ್"]
+        },
+        {
+          "id": "plumb_kn_t_med2",
+          "text": "PVC ಮತ್ತು GI ಪೈಪ್ ವ್ಯತ್ಯಾಸ ಏನು",
+          "type": "technical",
+          "difficulty": "medium",
+          "tip": "ಪ್ರತಿಯೊಂದರ ಉಪಯೋಗ ಹೇಳಿ",
+          "keywords": ["PVC", "GI", "ಪೈಪ್", "ವ್ಯತ್ಯಾಸ"]
+        }
+      ],
+      "situational": [
+        {
+          "id": "plumb_kn_s1",
+          "text": "ಗ್ರಾಹಕರ ಮನೆಯಲ್ಲಿ ದೊಡ್ಡ ಸೋರಿಕೆ ಆದರೆ ನಿಮ್ಮ ಮೊದಲ ಕ್ರಮ ಏನು",
+          "type": "situational",
+          "tip": "ತುರ್ತು ಕ್ರಮಗಳನ್ನು ಹೇಳಿ",
+          "keywords": ["ನೀರು ಮುಚ್ಚು", "ತುರ್ತು", "ದುರಸ್ತಿ"]
+        }
+      ]
+    },
+    "hindi": {
+      "warmup": [
+        {
+          "id": "plumb_hi_w1",
+          "text": "नमस्ते आप कहाँ से हैं और कितने साल से प्लंबिंग का काम कर रहे हैं",
+          "type": "warmup",
+          "tip": "अपना शहर और अनुभव बताएं",
+          "keywords": ["साल", "काम", "अनुभव"]
+        },
+        {
+          "id": "plumb_hi_w2",
+          "text": "आपने किस तरह का प्लंबिंग काम सबसे ज्यादा किया है",
+          "type": "warmup",
+          "tip": "घर या बिल्डिंग का काम बताएं",
+          "keywords": ["पाइप", "घर", "बिल्डिंग"]
+        }
+      ],
+      "technical_easy": [
+        {
+          "id": "plumb_hi_t_easy1",
+          "text": "पाइप में लीकेज हो तो आप क्या करेंगे",
+          "type": "technical",
+          "difficulty": "easy",
+          "tip": "समस्या का समाधान बताएं",
+          "keywords": ["लीकेज", "मरम्मत", "पाइप"]
+        },
+        {
+          "id": "plumb_hi_t_easy2",
+          "text": "आप कौन से औजार इस्तेमाल करते हैं",
+          "type": "technical",
+          "difficulty": "easy",
+          "tip": "औजारों के नाम बताएं",
+          "keywords": ["रिंच", "प्लंबर", "औजार"]
+        }
+      ],
+      "technical_medium": [
+        {
+          "id": "plumb_hi_t_med1",
+          "text": "पानी का प्रेशर कम हो तो क्या करेंगे",
+          "type": "technical",
+          "difficulty": "medium",
+          "tip": "समस्या खोजने के कदम बताएं",
+          "keywords": ["प्रेशर", "जांच", "पाइप"]
+        },
+        {
+          "id": "plumb_hi_t_med2",
+          "text": "PVC और GI पाइप में क्या फर्क है",
+          "type": "technical",
+          "difficulty": "medium",
+          "tip": "हर एक का उपयोग बताएं",
+          "keywords": ["PVC", "GI", "पाइप", "फर्क"]
+        }
+      ],
+      "situational": [
+        {
+          "id": "plumb_hi_s1",
+          "text": "ग्राहक के घर में बड़ा लीकेज हो तो पहला कदम क्या होगा",
+          "type": "situational",
+          "tip": "आपातकालीन कदम बताएं",
+          "keywords": ["पानी बंद", "आपातकाल", "मरम्मत"]
+        }
+      ]
+    },
+    "english": {
+      "warmup": [
+        {
+          "id": "plumb_en_w1",
+          "text": "Hello where are you from and how many years have you been doing plumbing work",
+          "type": "warmup",
+          "tip": "Tell your hometown and experience",
+          "keywords": ["years", "work", "experience"]
+        },
+        {
+          "id": "plumb_en_w2",
+          "text": "What type of plumbing work have you done the most",
+          "type": "warmup",
+          "tip": "Mention house or building work",
+          "keywords": ["pipe", "house", "building"]
+        }
+      ],
+      "technical_easy": [
+        {
+          "id": "plumb_en_t_easy1",
+          "text": "What would you do if there is a pipe leakage",
+          "type": "technical",
+          "difficulty": "easy",
+          "tip": "Explain the solution",
+          "keywords": ["leakage", "repair", "pipe"]
+        },
+        {
+          "id": "plumb_en_t_easy2",
+          "text": "What tools do you use",
+          "type": "technical",
+          "difficulty": "easy",
+          "tip": "Name the tools",
+          "keywords": ["wrench", "plumber", "tools"]
+        }
+      ],
+      "technical_medium": [
+        {
+          "id": "plumb_en_t_med1",
+          "text": "What would you do if water pressure is low",
+          "type": "technical",
+          "difficulty": "medium",
+          "tip": "Explain troubleshooting steps",
+          "keywords": ["pressure", "check", "pipe"]
+        },
+        {
+          "id": "plumb_en_t_med2",
+          "text": "What is the difference between PVC and GI pipes",
+          "type": "technical",
+          "difficulty": "medium",
+          "tip": "Explain usage of each",
+          "keywords": ["PVC", "GI", "pipe", "difference"]
+        }
+      ],
+      "situational": [
+        {
+          "id": "plumb_en_s1",
+          "text": "If there is a major leakage at customer house what is your first action",
+          "type": "situational",
+          "tip": "Explain emergency steps",
+          "keywords": ["shut water", "emergency", "repair"]
+        }
+      ]
+    }
+  }
+}

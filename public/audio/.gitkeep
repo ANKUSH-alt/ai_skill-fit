@@ -1,0 +1,5 @@
+# Audio files will be generated here by the backend script
+# Directory structure:
+# /audio/kn/ - Kannada audio files
+# /audio/hi/ - Hindi audio files
+# /audio/en/ - English audio files

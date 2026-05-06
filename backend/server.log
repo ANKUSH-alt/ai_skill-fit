@@ -1,0 +1,406 @@
+INFO:     Started server process [63481]
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
+🚀 Starting AI SkillFit API v2.0
+📊 Database: In-Memory (Demo)
+🌐 Server: http://localhost:8000
+📖 Docs: http://localhost:8000/docs
+INFO:     127.0.0.1:50199 - "GET /health HTTP/1.1" 200 OK
+DeepFace not available, using basic checks
+INFO:     127.0.0.1:50385 - "POST /api/candidate/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50391 - "GET /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/questions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50391 - "GET /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/questions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50394 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50397 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50399 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50405 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50407 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50411 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50413 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50416 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/complete HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/applications.py", line 1158, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 95, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 153, in simple_response
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 431, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 313, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/main.py", line 357, in complete_interview
+    engine = get_assessment_engine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 319, in get_assessment_engine
+    _assessment_engine = AssessmentEngine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 60, in __init__
+    self.video_analyzer = get_video_analyzer()
+                          ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 294, in get_video_analyzer
+    _video_analyzer = VideoAnalyzer()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 35, in __init__
+    self.mp_face_detection = mp.solutions.face_detection
+                             ^^^^^^^^^^^^
+AttributeError: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50417 - "POST /api/interview/873cf6be-63df-4fcd-8027-648e11c471ea/complete HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/applications.py", line 1158, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 95, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 153, in simple_response
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 431, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 313, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/main.py", line 357, in complete_interview
+    engine = get_assessment_engine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 319, in get_assessment_engine
+    _assessment_engine = AssessmentEngine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 60, in __init__
+    self.video_analyzer = get_video_analyzer()
+                          ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 294, in get_video_analyzer
+    _video_analyzer = VideoAnalyzer()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 35, in __init__
+    self.mp_face_detection = mp.solutions.face_detection
+                             ^^^^^^^^^^^^
+AttributeError: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50436 - "OPTIONS /api/auth/login HTTP/1.1" 200 OK
+/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/main.py:49: DeprecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  payload = {"sub": email, "exp": datetime.utcnow() + timedelta(days=7)}
+INFO:     127.0.0.1:50436 - "POST /api/auth/login HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50436 - "OPTIONS /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50439 - "OPTIONS /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50441 - "OPTIONS /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50442 - "OPTIONS /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50436 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50441 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50442 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50436 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50444 - "GET /uploads/photos/3b091409-10b5-4caf-a13a-fb21fb1a416c_photo.jpg HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50451 - "OPTIONS /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50452 - "OPTIONS /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50451 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50452 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50458 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50459 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50458 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50461 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50463 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50463 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50463 - "OPTIONS /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50463 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50463 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50465 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50465 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50468 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50469 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50468 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50471 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50471 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50468 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50469 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50471 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50480 - "GET /uploads/photos/3b091409-10b5-4caf-a13a-fb21fb1a416c_photo.jpg HTTP/1.1" 304 Not Modified
+INFO:     127.0.0.1:50483 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50483 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50485 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50489 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50489 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50483 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50489 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50483 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50491 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50491 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50491 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50491 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50491 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50491 - "GET /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50493 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50491 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50495 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50495 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50495 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50495 - "PUT /api/admin/candidates/5fc43e8c-9e7c-486b-9b83-07ed35b05585/status HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:50498 - "OPTIONS /api/admin/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50499 - "OPTIONS /api/admin/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50499 - "GET /api/admin/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50498 - "GET /api/admin/analytics HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50498 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50499 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50498 - "GET /api/admin/stats HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50501 - "GET /api/admin/candidates HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50539 - "POST /api/candidate/register HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50554 - "GET /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/questions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50554 - "GET /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/questions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50559 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50566 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50574 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50577 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50580 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50582 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50588 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/submit-response HTTP/1.1" 200 OK
+Background processing error: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50591 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/complete HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/applications.py", line 1158, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 95, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 153, in simple_response
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 431, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 313, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/main.py", line 357, in complete_interview
+    engine = get_assessment_engine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 319, in get_assessment_engine
+    _assessment_engine = AssessmentEngine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 60, in __init__
+    self.video_analyzer = get_video_analyzer()
+                          ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 294, in get_video_analyzer
+    _video_analyzer = VideoAnalyzer()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 35, in __init__
+    self.mp_face_detection = mp.solutions.face_detection
+                             ^^^^^^^^^^^^
+AttributeError: module 'mediapipe' has no attribute 'solutions'
+INFO:     127.0.0.1:50592 - "POST /api/interview/9f6ffe2f-0aa1-4149-bebd-ec8f4ea956d9/complete HTTP/1.1" 500 Internal Server Error
+ERROR:    Exception in ASGI application
+Traceback (most recent call last):
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/protocols/http/httptools_impl.py", line 416, in run_asgi
+    result = await app(  # type: ignore[func-returns-value]
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        self.scope, self.receive, self.send
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/uvicorn/middleware/proxy_headers.py", line 60, in __call__
+    return await self.app(scope, receive, send)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/applications.py", line 1158, in __call__
+    await super().__call__(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/applications.py", line 107, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 186, in __call__
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 95, in __call__
+    await self.simple_response(scope, receive, send, request_headers=headers)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/cors.py", line 153, in simple_response
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 119, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/opt/anaconda3/lib/python3.13/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 105, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 431, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "/opt/anaconda3/lib/python3.13/site-packages/fastapi/routing.py", line 313, in run_endpoint_function
+    return await dependant.call(**values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/main.py", line 357, in complete_interview
+    engine = get_assessment_engine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 319, in get_assessment_engine
+    _assessment_engine = AssessmentEngine()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/assessment_engine.py", line 60, in __init__
+    self.video_analyzer = get_video_analyzer()
+                          ~~~~~~~~~~~~~~~~~~^^
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 294, in get_video_analyzer
+    _video_analyzer = VideoAnalyzer()
+  File "/Users/ankushkumarguptapahleja/Downloads/build-ai-skillfit-platform/backend/core/video_analyzer.py", line 35, in __init__
+    self.mp_face_detection = mp.solutions.face_detection
+                             ^^^^^^^^^^^^
+AttributeError: module 'mediapipe' has no attribute 'solutions'

@@ -1,0 +1,232 @@
+{
+  "role": "electrician",
+  "languages": {
+    "kannada": {
+      "warmup": [
+        {
+          "id": "elec_kn_w1",
+          "text": "ನಮಸ್ಕಾರ ನೀವು ಎಲ್ಲಿಂದ ಬಂದಿದ್ದೀರಿ ಮತ್ತು ಎಷ್ಟು ವರ್ಷಗಳಿಂದ ವಿದ್ಯುತ್ ಕೆಲಸ ಮಾಡುತ್ತಿದ್ದೀರಿ",
+          "type": "warmup",
+          "audio": "/audio/kn/elec_kn_w1.mp3",
+          "tip": "ನಿಮ್ಮ ಊರು ಮತ್ತು ಅನುಭವ ಹೇಳಿ",
+          "min_seconds": 15,
+          "keywords": ["ವರ್ಷ", "ಕೆಲಸ", "ಜಿಲ್ಲೆ", "ಅನುಭವ"]
+        },
+        {
+          "id": "elec_kn_w2",
+          "text": "ನೀವು ಯಾವ ರೀತಿಯ ಎಲೆಕ್ಟ್ರಿಕಲ್ ಕೆಲಸ ಹೆಚ್ಚು ಮಾಡಿದ್ದೀರಿ",
+          "type": "warmup",
+          "audio": "/audio/kn/elec_kn_w2.mp3",
+          "tip": "ಮನೆ ವೈರಿಂಗ್ ಕೈಗಾರಿಕೆ ಅಥವಾ ಬೇರೆ ಏನು ಮಾಡಿದ್ದೀರಿ ಹೇಳಿ",
+          "min_seconds": 20,
+          "keywords": ["ವೈರಿಂಗ್", "ಮನೆ", "ಕೈಗಾರಿಕೆ", "ಪ್ಯಾನಲ್"]
+        }
+      ],
+      "technical_easy": [
+        {
+          "id": "elec_kn_t_easy1",
+          "text": "Earthing ಏಕೆ ಮಾಡಬೇಕು ಮತ್ತು ಸರಿಯಾದ Earthing ಇಲ್ಲದಿದ್ದರೆ ಏನಾಗಬಹುದು",
+          "type": "technical",
+          "difficulty": "easy",
+          "audio": "/audio/kn/elec_kn_t_easy1.mp3",
+          "tip": "ಸುರಕ್ಷತೆ ಮತ್ತು ಅಪಾಯಗಳ ಬಗ್ಗೆ ಹೇಳಿ",
+          "min_seconds": 25,
+          "keywords": ["ಆಘಾತ", "ಸುರಕ್ಷತೆ", "ಬೆಂಕಿ", "ರಕ್ಷಣೆ", "ಭೂಮಿ"]
+        },
+        {
+          "id": "elec_kn_t_easy2",
+          "text": "ಕೆಲಸ ಮಾಡುವ ಮೊದಲು ನೀವು ಯಾವ Safety ಸಾಧನಗಳನ್ನು ಬಳಸುತ್ತೀರಿ",
+          "type": "safety",
+          "difficulty": "easy",
+          "audio": "/audio/kn/elec_kn_t_easy2.mp3",
+          "tip": "PPE ಸಾಧನಗಳ ಹೆಸರು ಮತ್ತು ಉಪಯೋಗ ಹೇಳಿ",
+          "min_seconds": 25,
+          "keywords": ["ಕೈಗವಸು", "ಹೆಲ್ಮೆಟ್", "ಟೆಸ್ಟರ್", "ಸ್ಯಾಂಡಲ್", "ಸುರಕ್ಷತೆ"]
+        }
+      ],
+      "technical_medium": [
+        {
+          "id": "elec_kn_t_med1",
+          "text": "MCB ಪದೇ ಪದೇ ತೆಗೆಯುತ್ತಿದೆ ನೀವು ಏನು ಮಾಡುತ್ತೀರಿ ಹಂತ ಹಂತವಾಗಿ ಹೇಳಿ",
+          "type": "technical",
+          "difficulty": "medium",
+          "audio": "/audio/kn/elec_kn_t_med1.mp3",
+          "tip": "ಸಮಸ್ಯೆ ಕಂಡುಹಿಡಿಯುವ ಹಂತಗಳನ್ನು ಹೇಳಿ",
+          "min_seconds": 35,
+          "keywords": ["ಲೋಡ್", "ಶಾರ್ಟ್ ಸರ್ಕ್ಯೂಟ್", "ಓವರ್‌ಲೋಡ್", "ಪರೀಕ್ಷಿಸು", "ಡಿಸ್ಕನೆಕ್ಟ್"]
+        },
+        {
+          "id": "elec_kn_t_med2",
+          "text": "MCB ಮತ್ತು ELCB ನಡುವಿನ ವ್ಯತ್ಯಾಸ ಏನು ಯಾವಾಗ ಯಾವುದನ್ನು ಬಳಸಬೇಕು",
+          "type": "technical",
+          "difficulty": "medium",
+          "audio": "/audio/kn/elec_kn_t_med2.mp3",
+          "tip": "ಪ್ರತಿಯೊಂದರ ಕೆಲಸ ಮತ್ತು ಉಪಯೋಗ ಹೇಳಿ",
+          "min_seconds": 30,
+          "keywords": ["ಓವರ್‌ಲೋಡ್", "ಭೂಮಿ ಸೋರಿಕೆ", "ರಕ್ಷಣೆ", "ಸ್ಥಾಪಿಸು"]
+        }
+      ],
+      "technical_hard": [
+        {
+          "id": "elec_kn_t_hard1",
+          "text": "3-phase ಮತ್ತು single-phase ವ್ಯತ್ಯಾಸ ಏನು ಯಾವ ಸ್ಥಳಗಳಲ್ಲಿ ಯಾವುದನ್ನು ಬಳಸಬೇಕು ವಿವರವಾಗಿ ಹೇಳಿ",
+          "type": "technical",
+          "difficulty": "hard",
+          "audio": "/audio/kn/elec_kn_t_hard1.mp3",
+          "tip": "ವೋಲ್ಟೇಜ್ ಮತ್ತು ಉಪಯೋಗ ಬಗ್ಗೆ ಹೇಳಿ",
+          "min_seconds": 40,
+          "keywords": ["440V", "230V", "ಕೈಗಾರಿಕೆ", "ಮನೆ", "ಮೋಟಾರ್", "ಲೋಡ್"]
+        }
+      ],
+      "situational": [
+        {
+          "id": "elec_kn_s1",
+          "text": "ಕೆಲಸದ ಸಮಯದಲ್ಲಿ ನಿಮ್ಮ ಸಹೋದ್ಯೋಗಿಗೆ ವಿದ್ಯುತ್ ಶಾಕ್ ಆದರೆ ನಿಮ್ಮ ಮೊದಲ ಕ್ರಮ ಏನು",
+          "type": "situational",
+          "audio": "/audio/kn/elec_kn_s1.mp3",
+          "tip": "ನೀವು ಸ್ಥಿತಿಯನ್ನು ಹೇಗೆ ನಿಭಾಯಿಸುತ್ತೀರಿ ಹೇಳಿ",
+          "min_seconds": 30,
+          "keywords": ["ಸ್ವಿಚ್ ಆಫ್", "ಮುಟ್ಟಬೇಡ", "ಆಂಬುಲೆನ್ಸ್", "ಪ್ರಥಮ ಚಿಕಿತ್ಸೆ"]
+        }
+      ]
+    },
+    "hindi": {
+      "warmup": [
+        {
+          "id": "elec_hi_w1",
+          "text": "नमस्ते आप कहाँ से हैं और कितने साल से बिजली का काम कर रहे हैं",
+          "type": "warmup",
+          "audio": "/audio/hi/elec_hi_w1.mp3",
+          "tip": "अपना शहर और अनुभव बताएं",
+          "min_seconds": 15,
+          "keywords": ["साल", "काम", "जिला", "अनुभव"]
+        },
+        {
+          "id": "elec_hi_w2",
+          "text": "आपने किस तरह का बिजली का काम सबसे ज्यादा किया है",
+          "type": "warmup",
+          "audio": "/audio/hi/elec_hi_w2.mp3",
+          "tip": "घर की वायरिंग फैक्ट्री या कुछ और बताएं",
+          "min_seconds": 20,
+          "keywords": ["वायरिंग", "घर", "फैक्ट्री", "पैनल"]
+        }
+      ],
+      "technical_easy": [
+        {
+          "id": "elec_hi_t_easy1",
+          "text": "Earthing क्यों जरूरी है और सही Earthing न हो तो क्या हो सकता है",
+          "type": "technical",
+          "difficulty": "easy",
+          "audio": "/audio/hi/elec_hi_t_easy1.mp3",
+          "tip": "सुरक्षा और खतरों के बारे में बताएं",
+          "min_seconds": 25,
+          "keywords": ["करंट", "सुरक्षा", "आग", "बचाव", "जमीन"]
+        }
+      ],
+      "technical_medium": [
+        {
+          "id": "elec_hi_t_med1",
+          "text": "MCB बार बार ट्रिप हो रहा है आप क्या करेंगे कदम दर कदम बताएं",
+          "type": "technical",
+          "difficulty": "medium",
+          "audio": "/audio/hi/elec_hi_t_med1.mp3",
+          "tip": "समस्या खोजने के कदम बताएं",
+          "min_seconds": 35,
+          "keywords": ["लोड", "शॉर्ट सर्किट", "ओवरलोड", "जांच", "डिस्कनेक्ट"]
+        }
+      ],
+      "technical_hard": [
+        {
+          "id": "elec_hi_t_hard1",
+          "text": "3-phase और single-phase में क्या फर्क है कहाँ कौन सा इस्तेमाल करें विस्तार से बताएं",
+          "type": "technical",
+          "difficulty": "hard",
+          "audio": "/audio/hi/elec_hi_t_hard1.mp3",
+          "tip": "वोल्टेज और उपयोग के बारे में बताएं",
+          "min_seconds": 40,
+          "keywords": ["440V", "230V", "फैक्ट्री", "घर", "मोटर", "लोड"]
+        }
+      ],
+      "situational": [
+        {
+          "id": "elec_hi_s1",
+          "text": "काम के दौरान आपके साथी को बिजली का झटका लगे तो आप पहले क्या करेंगे",
+          "type": "situational",
+          "audio": "/audio/hi/elec_hi_s1.mp3",
+          "tip": "आप स्थिति को कैसे संभालेंगे बताएं",
+          "min_seconds": 30,
+          "keywords": ["स्विच ऑफ", "मत छुओ", "एम्बुलेंस", "प्राथमिक चिकित्सा"]
+        }
+      ]
+    },
+    "english": {
+      "warmup": [
+        {
+          "id": "elec_en_w1",
+          "text": "Hello where are you from and how many years have you been doing electrical work",
+          "type": "warmup",
+          "audio": "/audio/en/elec_en_w1.mp3",
+          "tip": "Tell your hometown and years of experience",
+          "min_seconds": 15,
+          "keywords": ["years", "work", "district", "experience"]
+        },
+        {
+          "id": "elec_en_w2",
+          "text": "What type of electrical work have you done the most",
+          "type": "warmup",
+          "audio": "/audio/en/elec_en_w2.mp3",
+          "tip": "Mention house wiring industrial or other work",
+          "min_seconds": 20,
+          "keywords": ["wiring", "house", "industrial", "panel"]
+        }
+      ],
+      "technical_easy": [
+        {
+          "id": "elec_en_t_easy1",
+          "text": "Why is earthing important and what can happen without proper earthing",
+          "type": "technical",
+          "difficulty": "easy",
+          "audio": "/audio/en/elec_en_t_easy1.mp3",
+          "tip": "Talk about safety and dangers",
+          "min_seconds": 25,
+          "keywords": ["shock", "safety", "fire", "protection", "ground"]
+        }
+      ],
+      "technical_medium": [
+        {
+          "id": "elec_en_t_med1",
+          "text": "An MCB keeps tripping repeatedly what steps would you take explain step by step",
+          "type": "technical",
+          "difficulty": "medium",
+          "audio": "/audio/en/elec_en_t_med1.mp3",
+          "tip": "Explain the troubleshooting steps",
+          "min_seconds": 35,
+          "keywords": ["load", "short circuit", "overload", "check", "disconnect"]
+        }
+      ],
+      "technical_hard": [
+        {
+          "id": "elec_en_t_hard1",
+          "text": "What is the difference between 3-phase and single-phase where should each be used explain in detail",
+          "type": "technical",
+          "difficulty": "hard",
+          "audio": "/audio/en/elec_en_t_hard1.mp3",
+          "tip": "Talk about voltage and application",
+          "min_seconds": 40,
+          "keywords": ["440V", "230V", "industrial", "residential", "motor", "load"]
+        }
+      ],
+      "situational": [
+        {
+          "id": "elec_en_s1",
+          "text": "If your colleague gets an electric shock at work what is your first action",
+          "type": "situational",
+          "audio": "/audio/en/elec_en_s1.mp3",
+          "tip": "Explain how you would handle the situation",
+          "min_seconds": 30,
+          "keywords": ["switch off", "dont touch", "ambulance", "first aid"]
+        }
+      ]
+    }
+  }
+}
