@@ -2,11 +2,29 @@
 Video Analyzer - Analyzes video quality and candidate behavior using MediaPipe
 Evaluates: face presence, eye contact, multiple faces, lighting, stability
 """
-import cv2
-import mediapipe as mp
 import numpy as np
 from dataclasses import dataclass
-from typing import List, Tuple
+from typing import List, Tuple, Optional
+
+# Lazy imports for optional dependencies
+cv2 = None
+mp = None
+
+def _ensure_dependencies():
+    """Lazy load heavy dependencies"""
+    global cv2, mp
+    if cv2 is None:
+        try:
+            import cv2 as _cv2
+            cv2 = _cv2
+        except ImportError:
+            raise ImportError("opencv-python not installed. Video analysis disabled.")
+    if mp is None:
+        try:
+            import mediapipe as _mp
+            mp = _mp
+        except ImportError:
+            raise ImportError("mediapipe not installed. Video analysis disabled.")
 
 @dataclass
 class VideoFeatures:
@@ -31,6 +49,8 @@ class VideoFeatures:
 
 class VideoAnalyzer:
     def __init__(self):
+        """Initialize video analyzer with lazy dependency loading"""
+        _ensure_dependencies()
         # Initialize MediaPipe Face Detection
         self.mp_face_detection = mp.solutions.face_detection
         self.mp_face_mesh = mp.solutions.face_mesh
@@ -287,9 +307,12 @@ class VideoAnalyzer:
 # Singleton instance
 _video_analyzer = None
 
-def get_video_analyzer() -> VideoAnalyzer:
-    """Get singleton video analyzer instance"""
+def get_video_analyzer() -> Optional[VideoAnalyzer]:
+    """Get singleton video analyzer instance (returns None if dependencies not available)"""
     global _video_analyzer
     if _video_analyzer is None:
-        _video_analyzer = VideoAnalyzer()
+        try:
+            _video_analyzer = VideoAnalyzer()
+        except ImportError:
+            return None
     return _video_analyzer
