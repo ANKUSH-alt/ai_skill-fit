@@ -47,14 +47,17 @@ def download_models():
     subprocess.run([sys.executable, "-m", "spacy", "download", "xx_ent_wiki_sm"])
     print("✅ spaCy models ready")
     
-    # 7. SpeechBrain
+    # 7. SpeechBrain (optional - skip if not needed)
     print("\n📥 Downloading SpeechBrain model...")
-    from speechbrain.pretrained import EncoderClassifier
-    EncoderClassifier.from_hparams(
-        source="speechbrain/spkrec-xvect-voxceleb",
-        savedir="pretrained_models/spkrec"
-    )
-    print("✅ SpeechBrain model ready")
+    try:
+        from speechbrain.pretrained import EncoderClassifier
+        EncoderClassifier.from_hparams(
+            source="speechbrain/spkrec-xvect-voxceleb",
+            savedir="pretrained_models/spkrec"
+        )
+        print("✅ SpeechBrain model ready")
+    except ImportError:
+        print("⚠️  SpeechBrain not installed, skipping...")
     
     print("\n" + "=" * 60)
     print("✨ All pretrained models downloaded successfully!")
