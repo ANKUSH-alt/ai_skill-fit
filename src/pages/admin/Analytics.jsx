@@ -48,11 +48,11 @@ const Analytics = () => {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-4">
-          <button onClick={() => navigate('/admin/dashboard')} className="text-gray-500 hover:text-gray-700">
+          <button onClick={() => navigate('/admin/dashboard')} className="text-gray-700 hover:text-gray-900 font-semibold">
             ← Dashboard
           </button>
-          <h1 className="font-bold text-gray-900">📊 Analytics</h1>
-          <span className="text-sm text-gray-500">Total: {analytics.total_candidates} candidates</span>
+          <h1 className="font-bold text-gray-900 text-lg">📊 Analytics</h1>
+          <span className="text-sm text-gray-700 font-medium">Total: {analytics.total_candidates} candidates</span>
         </div>
       </header>
 
@@ -60,7 +60,7 @@ const Analytics = () => {
         {/* Category Distribution */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
           className="bg-white rounded-xl shadow-sm p-6">
-          <h3 className="font-semibold text-gray-900 mb-4">Fitment Categories</h3>
+          <h3 className="font-semibold text-gray-900 mb-4 text-base">Fitment Categories</h3>
           <ResponsiveContainer width="100%" height={220}>
             <PieChart>
               <Pie data={categoryData} cx="50%" cy="50%" outerRadius={80} dataKey="value" label={({ name, value }) => `${name}: ${value}`}>
@@ -74,7 +74,7 @@ const Analytics = () => {
         {/* Language Distribution */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.1 }}
           className="bg-white rounded-xl shadow-sm p-6">
-          <h3 className="font-semibold text-gray-900 mb-4">Language Distribution</h3>
+          <h3 className="font-semibold text-gray-900 mb-4 text-base">Language Distribution</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={languageData}>
               <XAxis dataKey="name" />
@@ -88,7 +88,7 @@ const Analytics = () => {
         {/* Score Distribution */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}
           className="bg-white rounded-xl shadow-sm p-6">
-          <h3 className="font-semibold text-gray-900 mb-4">Score Distribution</h3>
+          <h3 className="font-semibold text-gray-900 mb-4 text-base">Score Distribution</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={scoreData}>
               <XAxis dataKey="range" />
@@ -102,7 +102,7 @@ const Analytics = () => {
         {/* District Distribution */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.3 }}
           className="bg-white rounded-xl shadow-sm p-6">
-          <h3 className="font-semibold text-gray-900 mb-4">Top Districts</h3>
+          <h3 className="font-semibold text-gray-900 mb-4 text-base">Top Districts</h3>
           <ResponsiveContainer width="100%" height={220}>
             <BarChart data={districtData} layout="vertical">
               <XAxis type="number" />
@@ -116,7 +116,7 @@ const Analytics = () => {
         {/* Role Distribution */}
         <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.4 }}
           className="bg-white rounded-xl shadow-sm col-span-full p-6">
-          <h3 className="font-semibold text-gray-900 mb-4">Candidates by Role</h3>
+          <h3 className="font-semibold text-gray-900 mb-4 text-base">Candidates by Role</h3>
           <ResponsiveContainer width="100%" height={200}>
             <BarChart data={roleData}>
               <XAxis dataKey="role" />

@@ -12,6 +12,7 @@ import CameraCheck from './pages/CameraCheck';
 import InterviewRoom from './pages/InterviewRoom';
 import Processing from './pages/Processing';
 import ThankYou from './pages/ThankYou';
+import CandidateDashboard from './pages/CandidateDashboard';
 
 // Admin Pages
 import AdminLogin from './pages/admin/AdminLogin';
@@ -109,6 +110,9 @@ function App() {
             </ProtectedRoute>
           }
         />
+        
+        {/* Candidate Dashboard - No protection needed */}
+        <Route path="/my-results" element={<CandidateDashboard />} />
         
         {/* Admin Routes - No language lock, English only */}
         <Route path="/admin" element={<AdminLogin />} />

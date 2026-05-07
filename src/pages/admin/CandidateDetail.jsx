@@ -7,11 +7,11 @@ import useAdminStore from '../../store/adminStore';
 const API = import.meta.env.VITE_API_URL || 'http://localhost:8000';
 
 const CATEGORY_COLORS = {
-  job_ready: 'bg-green-100 text-green-800 border-green-300',
-  needs_training: 'bg-yellow-100 text-yellow-800 border-yellow-300',
-  requires_verification: 'bg-blue-100 text-blue-800 border-blue-300',
-  low_quality: 'bg-gray-100 text-gray-800 border-gray-300',
-  suspected_fraud: 'bg-red-100 text-red-800 border-red-300'
+  job_ready: 'bg-green-100 text-green-900 border-green-300',
+  needs_training: 'bg-yellow-100 text-yellow-900 border-yellow-300',
+  requires_verification: 'bg-blue-100 text-blue-900 border-blue-300',
+  low_quality: 'bg-gray-200 text-gray-900 border-gray-400',
+  suspected_fraud: 'bg-red-100 text-red-900 border-red-300'
 };
 
 const ScoreBar = ({ label, score, color = 'bg-indigo-500' }) => (
@@ -85,10 +85,10 @@ const CandidateDetail = () => {
       <header className="bg-white shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center gap-4">
           <button onClick={() => navigate('/admin/dashboard')}
-            className="text-gray-500 hover:text-gray-700">
+            className="text-gray-700 hover:text-gray-900 font-semibold">
             ← Back
           </button>
-          <h1 className="font-bold text-gray-900">Candidate Review</h1>
+          <h1 className="font-bold text-gray-900 text-lg">Candidate Review</h1>
         </div>
       </header>
 
@@ -158,24 +158,24 @@ const CandidateDetail = () => {
                 placeholder="Add recruiter notes..."
                 value={note}
                 onChange={e => setNote(e.target.value)}
-                className="w-full border border-gray-200 rounded-lg px-3 py-2 text-sm mb-3 focus:outline-none focus:ring-2 focus:ring-indigo-300"
+                className="w-full border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500"
                 rows={3}
               />
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-2 mt-3">
                 <button onClick={() => handleAction('shortlisted')}
-                  className="bg-green-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-green-700">
+                  className="bg-green-600 text-white py-2 rounded-lg text-sm font-semibold hover:bg-green-700">
                   ✅ Shortlist
                 </button>
                 <button onClick={() => handleAction('rejected')}
-                  className="bg-red-600 text-white py-2 rounded-lg text-sm font-medium hover:bg-red-700">
+                  className="bg-red-600 text-white py-2 rounded-lg text-sm font-semibold hover:bg-red-700">
                   ❌ Reject
                 </button>
                 <button onClick={() => handleAction('flagged')}
-                  className="bg-orange-500 text-white py-2 rounded-lg text-sm font-medium hover:bg-orange-600">
+                  className="bg-orange-600 text-white py-2 rounded-lg text-sm font-semibold hover:bg-orange-700">
                   🚩 Flag
                 </button>
                 <button onClick={() => handleAction('pending_review')}
-                  className="bg-gray-200 text-gray-700 py-2 rounded-lg text-sm font-medium hover:bg-gray-300">
+                  className="bg-gray-600 text-white py-2 rounded-lg text-sm font-semibold hover:bg-gray-700">
                   ↩️ Reset
                 </button>
               </div>

@@ -152,11 +152,18 @@ const ThankYou = () => {
         {/* Good Luck */}
         <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 1.1 }}
           className="bg-dark-card rounded-3xl shadow-2xl p-6 text-center">
-          <p className="text-2xl font-bold text-success">{t('good_luck')}</p>
-          <button onClick={() => { localStorage.clear(); navigate('/'); }}
-            className="mt-4 px-6 py-2 bg-gray-700 text-gray-300 rounded-xl text-sm hover:bg-gray-600 transition-colors">
-            {language === 'kannada' ? 'ಮನೆ ಪುಟಕ್ಕೆ' : language === 'hindi' ? 'होम पेज' : 'Back to Home'}
-          </button>
+          <p className="text-2xl font-bold text-success mb-4">{t('good_luck')}</p>
+          <div className="flex flex-col gap-3">
+            <button onClick={() => navigate('/my-results')}
+              className="px-6 py-3 bg-primary text-white rounded-xl font-semibold hover:bg-primary-dark transition-colors">
+              {language === 'kannada' ? '📊 ನನ್ನ ಫಲಿತಾಂಶಗಳನ್ನು ನೋಡಿ' : 
+               language === 'hindi' ? '📊 मेरे परिणाम देखें' : '📊 View My Results'}
+            </button>
+            <button onClick={() => { localStorage.clear(); navigate('/'); }}
+              className="px-6 py-2 bg-gray-700 text-gray-300 rounded-xl text-sm hover:bg-gray-600 transition-colors">
+              {language === 'kannada' ? 'ಮನೆ ಪುಟಕ್ಕೆ' : language === 'hindi' ? 'होम पेज' : 'Back to Home'}
+            </button>
+          </div>
         </motion.div>
 
         {/* Confetti */}

@@ -4,11 +4,11 @@ import { motion } from 'framer-motion';
 import useAdminStore from '../../store/adminStore';
 
 const CATEGORY_COLORS = {
-  job_ready: 'bg-green-100 text-green-800',
-  needs_training: 'bg-yellow-100 text-yellow-800',
-  requires_verification: 'bg-blue-100 text-blue-800',
-  low_quality: 'bg-gray-100 text-gray-800',
-  suspected_fraud: 'bg-red-100 text-red-800'
+  job_ready: 'bg-green-100 text-green-900 border border-green-300',
+  needs_training: 'bg-yellow-100 text-yellow-900 border border-yellow-300',
+  requires_verification: 'bg-blue-100 text-blue-900 border border-blue-300',
+  low_quality: 'bg-gray-200 text-gray-900 border border-gray-400',
+  suspected_fraud: 'bg-red-100 text-red-900 border border-red-300'
 };
 
 const CATEGORY_LABELS = {
@@ -20,10 +20,10 @@ const CATEGORY_LABELS = {
 };
 
 const STATUS_COLORS = {
-  pending_review: 'bg-gray-100 text-gray-700',
-  shortlisted: 'bg-green-100 text-green-700',
-  rejected: 'bg-red-100 text-red-700',
-  flagged: 'bg-orange-100 text-orange-700'
+  pending_review: 'bg-gray-200 text-gray-900 border border-gray-400',
+  shortlisted: 'bg-green-100 text-green-900 border border-green-300',
+  rejected: 'bg-red-100 text-red-900 border border-red-300',
+  flagged: 'bg-orange-100 text-orange-900 border border-orange-300'
 };
 
 const DISTRICTS = [
@@ -129,16 +129,16 @@ const Dashboard = () => {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <span className="text-sm text-gray-600">👤 {adminName}</span>
+            <span className="text-sm font-medium text-gray-900">👤 {adminName}</span>
             <button
               onClick={() => navigate('/admin/analytics')}
-              className="text-sm text-indigo-600 hover:text-indigo-800 font-medium"
+              className="text-sm text-indigo-700 hover:text-indigo-900 font-semibold"
             >
               📊 Analytics
             </button>
             <button
               onClick={logout}
-              className="text-sm text-red-500 hover:text-red-700"
+              className="text-sm text-red-600 hover:text-red-800 font-semibold"
             >
               Sign Out
             </button>
@@ -167,27 +167,27 @@ const Dashboard = () => {
               placeholder="🔍 Search name or phone"
               value={filters.search}
               onChange={e => handleFilter('search', e.target.value)}
-              className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300 col-span-2 md:col-span-1"
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-indigo-500 col-span-2 md:col-span-1"
             />
             <select value={filters.district} onChange={e => handleFilter('district', e.target.value)}
-              className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               <option value="">All Districts</option>
               {DISTRICTS.map(d => <option key={d} value={d}>{d}</option>)}
             </select>
             <select value={filters.role} onChange={e => handleFilter('role', e.target.value)}
-              className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               <option value="">All Roles</option>
               {ROLES.map(r => <option key={r} value={r}>{r.charAt(0).toUpperCase() + r.slice(1)}</option>)}
             </select>
             <select value={filters.language} onChange={e => handleFilter('language', e.target.value)}
-              className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               <option value="">All Languages</option>
               <option value="kannada">ಕನ್ನಡ</option>
               <option value="hindi">हिंदी</option>
               <option value="english">English</option>
             </select>
             <select value={filters.category} onChange={e => handleFilter('category', e.target.value)}
-              className="border border-gray-200 rounded-lg px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-indigo-300">
+              className="border border-gray-300 rounded-lg px-3 py-2 text-sm text-gray-900 focus:outline-none focus:ring-2 focus:ring-indigo-500">
               <option value="">All Categories</option>
               <option value="job_ready">✅ Job Ready</option>
               <option value="needs_training">📚 Needs Training</option>
@@ -201,7 +201,7 @@ const Dashboard = () => {
         {/* Actions Bar */}
         <div className="flex justify-between items-center mb-3">
           <div className="flex items-center gap-3">
-            <span className="text-sm text-gray-600">{sortedCandidates.length} candidates</span>
+            <span className="text-sm font-semibold text-gray-900">{sortedCandidates.length} candidates</span>
             {selected.length > 0 && (
               <div className="flex gap-2">
                 <button onClick={() => handleBulkAction('shortlisted')}
@@ -233,17 +233,17 @@ const Dashboard = () => {
                       checked={selected.length === sortedCandidates.length && sortedCandidates.length > 0}
                     />
                   </th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium">Candidate</th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium cursor-pointer hover:text-indigo-600"
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold">Candidate</th>
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold cursor-pointer hover:text-indigo-700"
                     onClick={() => handleSort('score')}>
                     Score {sortBy === 'score' ? (sortDir === 'desc' ? '↓' : '↑') : ''}
                   </th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium">Category</th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium">Role</th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium">District</th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium">Language</th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium">Status</th>
-                  <th className="px-4 py-3 text-left text-gray-600 font-medium">Actions</th>
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold">Category</th>
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold">Role</th>
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold">District</th>
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold">Language</th>
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold">Status</th>
+                  <th className="px-4 py-3 text-left text-gray-900 font-semibold">Actions</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-100">
@@ -307,10 +307,10 @@ const Dashboard = () => {
                           <span className="ml-1 text-red-500 text-xs" title={fraudFlags.join(', ')}>🚩</span>
                         )}
                       </td>
-                      <td className="px-4 py-3 capitalize text-gray-700">{c.applied_role}</td>
-                      <td className="px-4 py-3 text-gray-700">{c.district}</td>
+                      <td className="px-4 py-3 capitalize text-gray-900 font-medium">{c.applied_role}</td>
+                      <td className="px-4 py-3 text-gray-900 font-medium">{c.district}</td>
                       <td className="px-4 py-3">
-                        <span className="text-xs">
+                        <span className="text-xs font-medium text-gray-900">
                           {c.preferred_language === 'kannada' ? '🇮🇳 ಕನ್ನಡ' :
                            c.preferred_language === 'hindi' ? '🇮🇳 हिंदी' : '🇬🇧 English'}
                         </span>
@@ -324,19 +324,19 @@ const Dashboard = () => {
                         <div className="flex gap-1">
                           <button
                             onClick={() => navigate(`/admin/candidate/${c.id}`)}
-                            className="text-xs bg-indigo-50 text-indigo-700 px-2 py-1 rounded hover:bg-indigo-100"
+                            className="text-xs bg-indigo-100 text-indigo-900 px-2 py-1 rounded hover:bg-indigo-200 font-semibold border border-indigo-300"
                           >
                             Review
                           </button>
                           <button
                             onClick={() => updateStatus(c.id, 'shortlisted')}
-                            className="text-xs bg-green-50 text-green-700 px-2 py-1 rounded hover:bg-green-100"
+                            className="text-xs bg-green-100 text-green-900 px-2 py-1 rounded hover:bg-green-200 font-semibold border border-green-300"
                           >
                             ✅
                           </button>
                           <button
                             onClick={() => updateStatus(c.id, 'rejected')}
-                            className="text-xs bg-red-50 text-red-700 px-2 py-1 rounded hover:bg-red-100"
+                            className="text-xs bg-red-100 text-red-900 px-2 py-1 rounded hover:bg-red-200 font-semibold border border-red-300"
                           >
                             ❌
                           </button>

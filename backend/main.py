@@ -540,6 +540,43 @@ async def get_analytics(email: str = Depends(verify_token)):
         "total_candidates": stats["total_candidates"]
     }
 
+# ─── Candidate Dashboard ─────────────────────────────────────────────────────
+
+@app.get("/api/candidate/{phone}/dashboard")
+async def get_candidate_dashboard(phone: str):
+    """Get candidate's assessment results and status"""
+    candidate = db.get_candidate_by_phone(phone)
+    if not candidate:
+        raise HTTPException(status_code=404, detail="Candidate not found")
+    
+    assessment = db.get_assessment_by_candidate(candidate["id"])
+    
+    if not assessment:
+        return {
+            "candidate": candidate,
+            "status": "pending",
+            "message": "Your interview is being processed. Please check back later."
+        }
+    
+    return {
+        "candidate": candidate,
+        "assessment": assessment,
+        "status": "completed",
+        "overall_score": assessment.get("overall_score"),
+        "category": assessment.get("category"),
+        "job_readiness_percentage": assessment.get("job_readiness_percentage"),
+        "scores": {
+            "technical": assessment.get("technical_score"),
+            "communication": assessment.get("communication_score"),
+            "confidence": assessment.get("confidence_score"),
+            "language": assessment.get("language_score")
+        },
+        "strengths": assessment.get("strengths", []),
+        "training_recommendations": assessment.get("training_recommendations", []),
+        "final_status": assessment.get("final_status", "pending_review"),
+        "recruiter_notes": assessment.get("recruiter_notes", "")
+    }
+
 # ─── Transcribe (for real-time) ───────────────────────────────────────────────
 
 @app.post("/api/transcribe")

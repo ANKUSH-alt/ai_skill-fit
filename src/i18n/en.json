@@ -117,5 +117,7 @@
     "ITI Certificate",
     "Diploma",
     "Degree"
-  ]
+  ],
+  "enterValidPhone": "Please enter a valid 10-digit mobile number",
+  "candidateNotFound": "No candidate found with this mobile number"
 }
