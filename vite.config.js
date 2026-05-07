@@ -9,7 +9,7 @@ export default defineConfig({
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
-          'ui-vendor': ['lucide-react', 'recharts']
+          'chart-vendor': ['recharts']
         }
       }
     }
